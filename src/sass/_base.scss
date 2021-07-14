@@ -1,0 +1,72 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  padding-left: 640px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 28px;
+  color: rgb(11, 50, 122);
+  background-image: url(../images/countries.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  display: block;
+}
+
+.search-area {
+  width: 500px;
+  height: 50px;
+  border-radius: 11px;
+  box-shadow: 5px 5px 5px rgb(163, 165, 199, 0.8);
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.country-card {
+  color: whitesmoke;
+  text-align: center;
+  width: 500px;
+}
+
+.card-data {
+  line-height: 0.5;
+}
+
+.card-list-item {
+  margin-bottom: 5px;
+}
+
+.country-list {
+  list-style: none;
+  margin-left: 40px;
+
+  &-item {
+    text-shadow: 2px 2px 1px rgb(224, 216, 216);
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
