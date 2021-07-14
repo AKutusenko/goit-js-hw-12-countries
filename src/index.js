@@ -37,11 +37,11 @@ function showCountries(countries) {
     if (countries.length <= 10) {
       renderList(countries);
     } else {
-      outputError();
+      outputErr();
     }
   } else {
     if (countries.length === undefined) {
-      searchError(countries);
+      searchErr(countries);
     } else {
       renderCard(countries);
     }
@@ -58,7 +58,7 @@ function renderList(country) {
   refs.cardContainer.insertAdjacentHTML('afterbegin', markup);
 }
 
-function outputError() {
+function outputErr() {
   info({
     title: 'Error',
     text: 'Too many matches found. Please entry a more specific query!',
@@ -82,7 +82,7 @@ function outputError() {
   });
 }
 
-function searchError() {
+function searchErr() {
   info({
     title: 'Error',
     text: 'Country was not found.Please, try again.',
