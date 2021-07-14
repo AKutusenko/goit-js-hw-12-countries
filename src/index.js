@@ -4,7 +4,7 @@ import fetchCountries from './js/fetchCountries.js';
 import refs from './js/refs.js';
 import countryCard from './templates/country-card.hbs';
 import countriesList from './templates/countries-list.hbs';
-//pnotify
+
 import { info } from '@pnotify/core';
 import '@pnotify/core/dist/PNotify.css';
 import '@pnotify/core/dist/BrightTheme.css';
@@ -15,10 +15,10 @@ const debounce = require('lodash.debounce');
 
 refs.searchArea.addEventListener('input', debounce(onSearch, 500));
 
-function onSearch(event) {
-  event.preventDefault();
+function onSearch(e) {
+  e.preventDefault();
 
-  const searchQuery = event.target.value.toLowerCase();
+  const searchQuery = e.target.value.toLowerCase();
   if (searchQuery === '') {
     refs.cardContainer.innerHTML = '';
     return;
@@ -69,7 +69,7 @@ function outputError() {
           confirm: true,
           buttons: [
             {
-              text: 'Ok',
+              text: 'OK',
               primary: true,
               click: notice => {
                 notice.close();
@@ -93,7 +93,7 @@ function searchError() {
           confirm: true,
           buttons: [
             {
-              text: 'Ok',
+              text: 'OK',
               primary: true,
               click: notice => {
                 notice.close();
