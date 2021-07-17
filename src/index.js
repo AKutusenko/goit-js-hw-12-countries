@@ -51,6 +51,7 @@ function onSearch(e) {
 
 function showCountries(countries) {
   refs.cardContainer.innerHTML = '';
+  refs.searchArea.value = '';
 
   if (countries.length === undefined) {
     searchErr();

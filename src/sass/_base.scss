@@ -18,7 +18,6 @@ ol {
 }
 
 body {
-  padding-left: 640px;
   font-family: 'Roboto', sans-serif;
   font-size: 28px;
   color: whitesmoke;
@@ -37,18 +36,20 @@ a {
   display: block;
 }
 
-.search-area {
+.search-form {
   width: 500px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.search-area {
+  width: 100%;
   height: 50px;
   border-radius: 11px;
   box-shadow: 5px 5px 5px rgb(163, 165, 199, 0.8);
   margin-top: 20px;
   margin-bottom: 10px;
-}
-
-.country-card {
   text-align: center;
-  width: 500px;
 }
 
 .card-data {
@@ -61,7 +62,6 @@ a {
 
 .country-list {
   list-style: none;
-  margin-left: 40px;
 
   &-item {
     margin-top: 10px;
