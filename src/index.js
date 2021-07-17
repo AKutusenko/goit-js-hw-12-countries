@@ -1,9 +1,9 @@
 import './sass/main.scss';
 
-import fetchCountries from './js/fetchCountries.js';
 import refs from './js/refs.js';
-import countryCard from './templates/country-card.hbs';
-import countriesList from './templates/countries-list.hbs';
+import fetchCountries from './js/fetchCountries.js';
+import countryCard from './templates/countryCard.hbs';
+import countriesList from './templates/countriesList.hbs';
 
 import { info } from '@pnotify/core';
 import '@pnotify/core/dist/PNotify.css';
