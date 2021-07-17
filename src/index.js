@@ -14,6 +14,25 @@ import '@pnotify/confirm/dist/PNotifyConfirm.css';
 const debounce = require('lodash.debounce');
 
 refs.searchArea.addEventListener('input', debounce(onSearch, 500));
+refs.cardContainer.addEventListener('click', clickOnCountry);
+
+function clickOnCountry(e) {
+  if (e.target.classList.contains('country-list-item')) {
+    refs.searchArea.value = e.target.textContent;
+    refs.cardContainer.innerHTML = '';
+
+    const searchQuery = refs.searchArea.value.toLowerCase();
+    if (searchQuery === '') {
+      refs.cardContainer.innerHTML = '';
+      return;
+    }
+
+    fetchCountries
+      .fetchCountry(searchQuery)
+      .then(showCountries)
+      .catch(error => console.log(error));
+  }
+}
 
 function onSearch(e) {
   e.preventDefault();
@@ -85,7 +104,7 @@ function outputErr() {
 function searchErr() {
   info({
     title: 'Error',
-    text: 'Country was not found.Please, try again.',
+    text: 'Country was not found!',
     modules: new Map([
       [
         Confirm,
