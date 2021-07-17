@@ -33,19 +33,19 @@ function onSearch(e) {
 function showCountries(countries) {
   refs.cardContainer.innerHTML = '';
 
-  if (countries.length > 1) {
-    if (countries.length <= 10) {
-      renderList(countries);
-    } else {
-      outputErr();
-    }
-  } else {
-    if (countries.length === undefined) {
-      searchErr(countries);
-    } else {
-      renderCard(countries);
-    }
+  if (countries.length === undefined) {
+    searchErr();
+    return;
   }
+  if (countries.length > 1 && countries.length <= 10) {
+    renderList(countries);
+    return;
+  }
+  if (countries.length === 1) {
+    renderCard(countries);
+    return;
+  }
+  outputErr();
 }
 
 function renderCard(country) {
