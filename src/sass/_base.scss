@@ -66,6 +66,7 @@ a {
   &-item {
     margin-top: 10px;
     margin-bottom: 10px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   &-item:hover,
